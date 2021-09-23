@@ -1,0 +1,73 @@
+    .usual-text p {
+        line-height: 1.5em;
+        margin-bottom: 2.5em;
+        width: 50%;
+        font-family: e-UkraineLight;
+        padding: 0;
+        box-align: justify;
+        margin-left: 12.5vw;
+    }
+    
+    .small-header {
+        font-size: 1.7em;
+        margin-bottom: 1em;
+        display: block;
+        font-family: e-UkraineLight;
+        line-height: 1.5em;
+        -webkit-margin-before: 1em;
+        margin-block-start: 1em;
+        -webkit-margin-after: 1em;
+        margin-block-end: 1em;
+        -webkit-margin-start: 0px;
+        margin-inline-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-inline-end: 0px;
+        padding: 0;
+        box-align: justify;
+        margin-left: 12.5vw;
+        margin-right: 20%;
+        margin-top: 50px;
+        position: relative;
+        width: 67%;
+        max-width: 50%;
+    }
+    
+    .back-color {
+        background-color: #E2ECF4;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    #codex_articles {
+        position: relative;
+        pointer-events: none;
+    }
+    
+    #codex_articles .tooltip {
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
+    }
+    
+    #codex_articles {
+        display: block !important;
+        max-width: 99vw !important;
+    }
+    
+    #two-buttons {
+        display: block !important;
+        max-width: 99vw !important;
+    }
+    
+    #two-buttons {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        margin-left: 12.5vw;
+        margin-right: 20%;
+        max-width: 50%;
+    }
