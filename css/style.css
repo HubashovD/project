@@ -71,3 +71,27 @@
         margin-right: 20%;
         max-width: 50%;
     }
+    
+    #var-1,
+    #var-2 {
+        font-family: e-UkraineLight;
+        display: inline-block;
+        font-size: 1em;
+        border: 2px solid black;
+        border-radius: 40px;
+        background-color: black;
+        cursor: pointer;
+        background-origin: border-box;
+        border: 2px solid transparent;
+        position: relative;
+        border: 2px solid black;
+        padding: 12px 56px;
+        border-radius: 40px;
+        -webkit-transition: opacity .5s;
+        transition: opacity .5s;
+        background-color: white;
+        margin-bottom: 20px;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
