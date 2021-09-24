@@ -68,7 +68,7 @@
                 .duration(100)
                 .style("opacity", 1)
             tooltip
-                .html("Стаття " + d.codexArticle_name + "<br>" + "Кількість" + d.Column)
+                .html("<b>" + "Порушення: " + "</b>" + d.codexArticle_name + "<br>" + "<b>" + "Кількість: " + "</b>" + d.Column)
                 .style("left", (d3.mouse(this)[0] + 90) + "px")
                 .style("top", (d3.mouse(this)[1] - 90) + "px")
         }

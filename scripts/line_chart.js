@@ -24,8 +24,6 @@
             d.Column = +d.Column
         });
 
-        console.log(data)
-
         // group the data: I want to draw one line per group
         var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
             .key(function(d) { return d.type; })
@@ -77,10 +75,10 @@
 
         // color palette
         var res = sumstat.map(function(d) { return d.type }) // list of group names
-
         var color = d3.scaleOrdinal()
             .domain(res)
-            .range(["red", "green"])
+            .range(['#e41a1c', '#377eb8'])
+
 
         // Draw the line
         svg.selectAll(".line")
@@ -96,6 +94,67 @@
                     .y(function(d) { return y(+d.Column); })
                     (d.values)
             })
+
+        var bisect = d3.bisector(function(d) { return d.date; }).left;
+
+        // Create the circle that travels along the curve of chart
+        var focus = svg
+            .append('g')
+            .append('circle')
+            .style("fill", "none")
+            .attr("stroke", "black")
+            .attr('r', 8.5)
+            .style("opacity", 0)
+
+        //Create the text that travels along the curve of chart
+        var focusText = svg
+            .append('g')
+            .append('text')
+            .style("opacity", 0)
+            .attr("text-anchor", "left")
+            .attr("alignment-baseline", "middle")
+
+        // Create a rect on top of the svg area: this rectangle recovers mouse position
+        svg
+            .append('rect')
+            .style("fill", "none")
+            .style("pointer-events", "all")
+            .attr('width', width)
+            .attr('height', height)
+            .on('mouseover', mouseover)
+            .on('mousemove', mousemove)
+            .on('mouseout', mouseout);
+
+        // What happens when the mouse move -> show the annotations at the right positions.
+        function mouseover() {
+            focus.style("opacity", 1)
+            focusText.style("opacity", 1)
+        }
+
+        function mousemove() {
+            // recover coordinate we need
+            var x0 = x.invert(d3.mouse(this)[0]);
+            var i = bisect(data, x0, 1);
+            selectedData = data[i]
+            focus
+                .attr("cx", x(selectedData.date))
+                .attr("cy", y(selectedData.Column))
+            focusText
+                .html("x:" + selectedData.date + "  -  " + "y:" + selectedData.Column + "type: " + selectedData.type)
+                .attr("x", x(selectedData.date) + 15)
+                .attr("y", y(selectedData.Column))
+        }
+
+        function mouseout() {
+            focus.style("opacity", 0)
+            focusText.style("opacity", 0)
+        }
+
+
+
+
+
+
 
     })
 })();

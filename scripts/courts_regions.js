@@ -97,7 +97,7 @@
         // ----------------
         // Create a tooltip
         // ----------------
-        var tooltip = d3.select("#regulator_raiting")
+        var tooltip = d3.select("#courts_regions")
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
@@ -152,6 +152,7 @@
             .attr("y", function(d) { return y(d.short_name); })
             .attr("height", 20)
             .attr("width", function(d) { return x(d.ide); })
+            .attr("fill", "#4562AB")
             .attr("rx", 6)
             .attr("ry", 6)
 

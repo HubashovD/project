@@ -41,9 +41,14 @@
         margin-bottom: 5%;
     }
     
+    #line_chart {
+        position: relative;
+    }
+    
     #codex_articles {
         position: relative;
-        pointer-events: none;
+        display: block !important;
+        max-width: 99vw !important;
     }
     
     #codex_articles .tooltip {
@@ -52,9 +57,13 @@
         pointer-events: none;
     }
     
-    #codex_articles {
-        display: block !important;
-        max-width: 99vw !important;
+    #activitySphereOnOffenseMomentName {
+        position: relative;
+    }
+    
+    #activitySphereOnOffenseMomentName .tooltip {
+        position: absolute;
+        pointer-events: none;
     }
     
     #two-buttons {
@@ -94,4 +103,13 @@
         -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    }
+    
+    #courts_regions {
+        position: relative;
+    }
+    
+    #courts_regions .tooltip {
+        position: absolute;
+        pointer-events: none;
     }

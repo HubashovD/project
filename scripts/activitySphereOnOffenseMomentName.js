@@ -45,10 +45,10 @@
 
         function update(f) {
 
-            var filtered = data.filter(function(d){ return d.activitySphereOnOffenseMomentName === f})
+            var filtered = data.filter(function(d) { return d.activitySphereOnOffenseMomentName === f })
 
             // Update the X axis
-            y.domain(filtered.map(function(d) { return d.codexArticle_name; }))
+            y.domain(filtered.map(function(d) { return d.short_name; }))
                 .range([0, 25 * filtered.length])
                 .padding([0.2])
 
@@ -85,8 +85,7 @@
                     .duration(100)
                     .style("opacity", 1)
                 tooltip
-                    .html("Орган: " + d.sphere + "<br>" + "середня кількість порушень на одного інспектора: " + d.raiting +
-                        "<br>" + "Інспекторів: " + d.pib + "<br>" + "Перевірок: " + d.ide)
+                    .html("<b>" + "Порушення: " + "</b>" + d.codexArticle_name + "<br>" + "<b>" + "Кількість порушень: " + "</b>" + d.Column)
                     .style("left", (d3.mouse(this)[0] + 90) + "px")
                     .style("top", (d3.mouse(this)[1] - 90) + "px")
             }
@@ -117,11 +116,11 @@
                 .on("mousemove", moveTooltip)
                 .on("mouseleave", hideTooltip)
                 .merge(u) // get the already existing elements as well               
-                .attr("y", function(d) { return y(d.codexArticle_name)})
+                .attr("y", function(d) { return y(d.short_name) })
                 .transition() // and apply changes to all of them
                 .duration(1000)
                 .attr("x", 0)
-                .attr("y", function(d) { return y(d.codexArticle_name); })
+                .attr("y", function(d) { return y(d.short_name); })
                 .attr("height", 20)
                 .attr("width", function(d) { return x(d.Column); })
                 .attr("fill", "#4562AB")
@@ -144,11 +143,11 @@
                 .append("text")
                 .attr("class", "bar-labels")
                 .merge(label)
-                .attr("y", function(d) { return y(d.codexArticle_name) + 10; })
+                .attr("y", function(d) { return y(d.short_name) + 10; })
                 .transition() // and apply changes to all of them
                 .duration(1000)
                 .attr("x", function(d) { return x(d.Column); })
-                .attr("y", function(d) { return y(d.codexArticle_name) + 10; })
+                .attr("y", function(d) { return y(d.short_name) + 10; })
                 .text(function(d) { return d.Column; });
 
             label
