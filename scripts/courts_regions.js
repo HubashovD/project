@@ -114,7 +114,7 @@
                 .duration(100)
                 .style("opacity", 1)
             tooltip
-                .html(d.sphere_detailed + "<br>" + "<b>" + d.ide + "</b>" + " перевірок")
+                .html("<b>" + d.long_name + "</b>" + "<br>" + "Прийнятих рішень та вироків: " + d.ide)
                 .style("left", (d3.mouse(this)[0] - 100) + "px")
                 .style("top", (d3.mouse(this)[1]) + 19 + "px")
                 .style("width", 185 + "px")

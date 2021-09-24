@@ -1,115 +1,254 @@
-    .usual-text p {
-        line-height: 1.5em;
-        margin-bottom: 2.5em;
-        width: 50%;
-        font-family: e-UkraineLight;
-        padding: 0;
-        box-align: justify;
-        margin-left: 12.5vw;
-    }
-    
-    .small-header {
-        font-size: 1.7em;
-        margin-bottom: 1em;
-        display: block;
-        font-family: e-UkraineLight;
-        line-height: 1.5em;
-        -webkit-margin-before: 1em;
-        margin-block-start: 1em;
-        -webkit-margin-after: 1em;
-        margin-block-end: 1em;
-        -webkit-margin-start: 0px;
-        margin-inline-start: 0px;
-        -webkit-margin-end: 0px;
-        margin-inline-end: 0px;
-        padding: 0;
-        box-align: justify;
-        margin-left: 12.5vw;
-        margin-right: 20%;
-        margin-top: 50px;
-        position: relative;
-        width: 67%;
-        max-width: 50%;
-    }
-    
-    .back-color {
-        background-color: #E2ECF4;
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 10px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    
+@font-face {
+    font-family: e-UkraineLight;
+    src: url(../e-Ukraine-Light.woff);
+}
+
+@font-face {
+    font-family: e-UkraineRegular;
+    src: url(../e-Ukraine-Regular.woff);
+}
+
+@font-face {
+    font-family: e-UkraineHead;
+    src: url(../e-UkraineHead-NAME.otf);
+}
+
+@media (min-width: 1680px) {
+    #codex_articles,
+    #activitySphereOnOffenseMomentName,
+    #courts_regions,
     #line_chart {
-        position: relative;
+        width: 1408px;
     }
-    
-    #codex_articles {
-        position: relative;
-        display: block !important;
-        max-width: 99vw !important;
-    }
-    
-    #codex_articles .tooltip {
-        position: absolute;
-        z-index: 999;
-        pointer-events: none;
-    }
-    
-    #activitySphereOnOffenseMomentName {
-        position: relative;
-    }
-    
-    #activitySphereOnOffenseMomentName .tooltip {
-        position: absolute;
-        pointer-events: none;
-    }
-    
-    #two-buttons {
-        display: block !important;
-        max-width: 99vw !important;
-    }
-    
-    #two-buttons {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-        margin-left: 12.5vw;
-        margin-right: 20%;
-        max-width: 50%;
-    }
-    
-    #var-1,
-    #var-2 {
-        font-family: e-UkraineLight;
-        display: inline-block;
-        font-size: 1em;
-        border: 2px solid black;
-        border-radius: 40px;
-        background-color: black;
-        cursor: pointer;
-        background-origin: border-box;
-        border: 2px solid transparent;
-        position: relative;
-        border: 2px solid black;
-        padding: 12px 56px;
-        border-radius: 40px;
-        -webkit-transition: opacity .5s;
-        transition: opacity .5s;
-        background-color: white;
-        margin-bottom: 20px;
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    }
-    
+}
+
+@media (min-width: 1280px) and (max-width: 1679px) {
+    #codex_articles,
+    #line_chart,
+    #activitySphereOnOffenseMomentName,
     #courts_regions {
-        position: relative;
+        width: 80%;
     }
-    
-    #courts_regions .tooltip {
-        position: absolute;
-        pointer-events: none;
+}
+
+@media (min-width: 992px) and (max-width: 1279px) {
+    .small-header {
+        width: 864px !important;
     }
+    #codex_articles,
+    #line_chart,
+    #activitySphereOnOffenseMomentName,
+    #courts_regions {
+        width: 80%;
+    }
+    .back-color {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 480px) {
+    #codex_articles,
+    #line_chart,
+    #activitySphereOnOffenseMomentName,
+    #courts_regions {
+        width: 95%;
+    }
+    .usual-text p {
+        width: 85% !important;
+    }
+    .about-right p {
+        width: 95vw !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #codex_articles,
+    #line_chart,
+    #activitySphereOnOffenseMomentName,
+    #courts_regions {
+        width: 95%;
+    }
+    .usual-text p {
+        width: 85% !important;
+    }
+    .about-right p {
+        width: 95vw !important;
+    }
+}
+
+.usual-text p {
+    line-height: 1.5em;
+    margin-bottom: 2.5em;
+    width: 50%;
+    font-family: e-UkraineLight;
+    padding: 0;
+    box-align: justify;
+    margin-left: 12.5vw;
+}
+
+.small-header {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    display: block;
+    font-family: e-UkraineLight;
+    line-height: 1.5em;
+    -webkit-margin-before: 1em;
+    margin-block-start: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+    -webkit-margin-start: 0px;
+    margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-inline-end: 0px;
+    padding: 0;
+    box-align: justify;
+    margin-left: 12.5vw;
+    margin-right: 20%;
+    margin-top: 50px;
+    position: relative;
+    width: 67%;
+    max-width: 50%;
+}
+
+.back-color {
+    background-color: #E2ECF4;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#line_chart {
+    position: relative;
+}
+
+#codex_articles {
+    position: relative;
+    display: block !important;
+    max-width: 99vw !important;
+}
+
+#codex_articles .tooltip {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#activitySphereOnOffenseMomentName {
+    position: relative;
+}
+
+#activitySphereOnOffenseMomentName .tooltip {
+    position: absolute;
+    pointer-events: none;
+}
+
+#two-buttons {
+    display: block !important;
+    max-width: 99vw !important;
+}
+
+#two-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    margin-left: 12.5vw;
+    margin-right: 20%;
+    max-width: 50%;
+}
+
+#var-1,
+#var-2 {
+    font-family: e-UkraineLight;
+    display: inline-block;
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: black;
+    cursor: pointer;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    position: relative;
+    border: 2px solid black;
+    padding: 12px 56px;
+    border-radius: 40px;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    background-color: white;
+    margin-bottom: 20px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+#courts_regions {
+    position: relative;
+}
+
+#courts_regions .tooltip {
+    position: absolute;
+    pointer-events: none;
+}
+
+.custom-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    height: 3.5rem;
+    margin: 0 5px 0 0;
+    max-width: 350px;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #000000;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+
+.about-right {
+    line-height: 1.6
+}
+
+#line-chart-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 80% 50px;
+    grid-template-columns: 80% 50px;
+    width: 100%;
+    padding: auto;
+}
+
+#legend {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-flex-line-pack: start;
+    align-content: start;
+}
+
+#legend p {
+    line-height: 1em;
+    margin-bottom: 1em;
+    font-family: e-UkraineLight;
+}
+
+#true {
+    background-color: red;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+}
+
+#false {
+    background-color: blue;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+}

@@ -1,0 +1,3487 @@
+@font-face {
+    font-family: e-UkraineLight;
+    src: url(../e-Ukraine-Light.woff);
+}
+
+@font-face {
+    font-family: e-UkraineRegular;
+    src: url(../e-Ukraine-Regular.woff);
+}
+
+@font-face {
+    font-family: e-UkraineHead;
+    src: url(../e-UkraineHead-Bold.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.container {
+    scroll-behavior: smooth;
+    background-color: white;
+    font-family: e-UkraineLight;
+    z-index: 1;
+    min-height: 100%;
+}
+
+.container .header-wrapper,
+.container .logo-footer,
+.container .navigation-menu,
+.container .to-main,
+.container .about-project,
+.container .big-stats,
+.container .section-block,
+.container .hospital-stats-container,
+.container .doctor-stats-container,
+.container .header-line-chart,
+.container .line-chart-container,
+.container .treemap-wrapper,
+.container .charity-table-container {
+    max-width: 1680px;
+}
+
+@media (min-width: 1680px) {
+    .container .header-wrapper,
+    .container .logo-footer,
+    .container .navigation-menu,
+    .container .to-main,
+    .container .about-project,
+    .container .big-stats,
+    .container .section-block,
+    .container .hospital-stats-container,
+    .container .doctor-stats-container,
+    .container .header-line-chart,
+    .container .line-chart-container,
+    .container .how-to-section-wrapper,
+    .container .treemap-wrapper,
+    .container .charity-table-container {
+        width: 1408px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1679px) {
+    .container .header-wrapper,
+    .container .logo-footer,
+    .container .navigation-menu,
+    .container .to-main,
+    .container .about-project,
+    .container .big-stats,
+    .container .section-block,
+    .container .hospital-stats-container,
+    .container .doctor-stats-container,
+    .container .header-line-chart,
+    .container .line-chart-container,
+    .container .how-to-section-wrapper,
+    .container .treemap-wrapper,
+    .container .charity-table-container {
+        width: 1120px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1279px) {
+    .usual-text {
+        width: 864px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 480px) {
+    .container .header-wrapper,
+    .container .logo-footer,
+    .container .navigation-menu,
+    .container .to-main,
+    .container .about-project,
+    .container .big-stats,
+    .container .section-block,
+    .container .hospital-stats-container,
+    .container .doctor-stats-container,
+    .container .header-line-chart,
+    .container .line-chart-container,
+    .container .how-to-section-wrapper,
+    .container .treemap-wrapper,
+    .container .charity-table-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 479px) {
+    .container .header-wrapper,
+    .container .logo-footer,
+    .container .navigation-menu,
+    .container .to-main,
+    .container .about-project,
+    .container .big-stats,
+    .container .section-block,
+    .container .hospital-stats-container,
+    .container .doctor-stats-container,
+    .container .header-line-chart,
+    .container .line-chart-container,
+    .container .how-to-section-wrapper,
+    .container .treemap-wrapper,
+    .container .charity-table-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 370px) {
+    .container .main-section .about-project p.header-text,
+    .container .main-section .section-block .section-header,
+    .container .disease-section .about-project p.header-text,
+    .container .disease-section .section-block .section-header,
+    .container .charity-section .about-project p.header-text,
+    .container .charity-section .section-block .section-header {
+        font-size: 2.7em;
+    }
+    .container .main-section .text-bold,
+    .container .disease-section .text-bold,
+    .container .charity-section .text-bold {
+        font-size: 0.8em;
+    }
+}
+
+.container a {
+    color: black;
+}
+
+.container a:hover {
+    color: #616365;
+    border-color: #616365;
+}
+
+.container a.h-link {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.container p.block-header {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    display: block;
+}
+
+.container p.block-text {
+    line-height: 1.5em;
+    margin-bottom: 2.5em;
+    max-width: 70%;
+}
+
+@media (max-width: 768px) {
+    .container p.block-text {
+        max-width: 100%;
+    }
+}
+
+.container .section-block {
+    margin: 0px auto 1.5em auto;
+}
+
+.container .section-block .section-header {
+    font-family: e-UkraineRegular;
+    font-size: 2.9em;
+    margin-bottom: 1em;
+}
+
+.container .section-block .section-text {
+    line-height: 1.5em;
+}
+
+.container .section-block .section-text p {
+    max-width: 70%;
+}
+
+.container #s2.section-block {
+    margin: 2em auto 1.5em auto;
+}
+
+@media (max-width: 768px) {
+    .container .section-block br {
+        display: none;
+    }
+    .container .section-block .section-text p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 479px) {
+    .container .section-block {
+        width: 90%;
+    }
+}
+
+.container .how-to-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 67%;
+    -webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+    cursor: pointer;
+}
+
+.container .how-to-section .how-to-border {
+    border: double 2px transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.container .how-to-section .how-to-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.container .how-to-section .how-to-bar .pointer-icon {
+    padding-left: 16px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.container .how-to-section .how-to-bar .pointer-icon img {
+    height: 36px;
+    width: 36px;
+}
+
+.container .how-to-section .how-to-bar:before,
+.container .how-to-section .how-to-bar:after {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    width: 2px;
+    height: 20px;
+    content: "";
+    background-color: #000;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.container .how-to-section .how-to-bar:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.container .how-to-section .how-to-bar p.how-to-title {
+    font-size: 1.2em;
+    padding: 20px 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.container .how-to-section .how-to-description {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .2s ease-out;
+    transition: max-height .2s ease-out;
+    padding: 0 16px 0px 16px;
+}
+
+.container .how-to-section .how-to-description p {
+    line-height: 1.5em;
+    font-size: 13px;
+    width: 95%;
+}
+
+.container .how-to-section.is-open span {
+    background: transparent;
+}
+
+.container .how-to-section.is-open .how-to-description {
+    max-height: 1000px;
+    padding: 16px;
+    line-height: 1.5em;
+}
+
+.container .how-to-section.is-open .how-to-bar:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.container .how-to-section#how-bee {
+    width: 650px;
+}
+
+.container .how-to-section#how-calc {
+    width: 100%;
+    margin-bottom: 36px;
+    background-color: #FFF4D7;
+}
+
+.container .how-to-section#how-calc .how-to-border {
+    padding: 0;
+    border: solid 0px transparent;
+    background: transparent;
+}
+
+.container .how-to-section#how-calc .pointer-icon {
+    margin-right: 16px;
+}
+
+.container .how-to-section#how-calc .how-to-title {
+    width: 75%;
+    font-size: 16px;
+}
+
+.container .how-to-section#how-line {
+    width: calc(67% - 36px);
+}
+
+.container .how-to-section#how-line .how-to-bar {
+    background-color: #FFF4D7;
+}
+
+.container .how-to-section#how-line .how-to-description {
+    background-color: #FFF4D7;
+}
+
+@media (max-width: 768px) {
+    .container .how-to-section#how-bee,
+    .container .how-to-section#how-calc {
+        width: 100%;
+    }
+    .container .how-to-section#how-line {
+        margin: 0px auto 32px auto;
+        width: 90%;
+    }
+    .container .how-to-section#how-bee.is-closed:hover,
+    .container .how-to-section#how-calc.is-closed:hover,
+    .container .how-to-section#how-line.is-closed:hover {
+        background-color: inherit;
+        color: black;
+    }
+    .container .how-to-section#how-bee.is-closed:hover p.how-to-title,
+    .container .how-to-section#how-calc.is-closed:hover p.how-to-title,
+    .container .how-to-section#how-line.is-closed:hover p.how-to-title {
+        -webkit-transform: none;
+        transform: none;
+    }
+    .container .how-to-section#how-bee.is-closed:hover span,
+    .container .how-to-section#how-calc.is-closed:hover span,
+    .container .how-to-section#how-line.is-closed:hover span {
+        background: transparent;
+    }
+    .container .how-to-section#how-bee.is-closed:hover:before,
+    .container .how-to-section#how-calc.is-closed:hover:before,
+    .container .how-to-section#how-line.is-closed:hover:before {
+        background-color: black;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .container .how-to-section#how-bee.is-closed:hover:after,
+    .container .how-to-section#how-calc.is-closed:hover:after,
+    .container .how-to-section#how-line.is-closed:hover:after {
+        background-color: black;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .container .how-to-section#how-calc .how-to-title {
+        width: 65%;
+    }
+    .container .how-to-section#how-line .how-to-border .how-to-bar .how-to-title {
+        width: 80%;
+    }
+}
+
+.container .header-background {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    background-color: #C5D9E9;
+    position: relative;
+    z-index: 0;
+}
+
+.container .header-background .header-wrapper {
+    margin: 0px auto 0px auto;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .header-background .header-block {
+    display: block;
+}
+
+.container .header-background .header-block .text-bold {
+    margin-bottom: 26px;
+}
+
+.container .header-background .header-block .text-bold p {
+    font-family: e-UkraineHead;
+    font-size: 3.2em;
+    line-height: 1.2;
+}
+
+.container .header-background .header-block .text-under p {
+    line-height: 1.4;
+    margin-bottom: 72px;
+}
+
+.container .header-background .header-block a.scroll-button {
+    padding: 14px 44px;
+    background: transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    border: 2px solid black;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-indent: 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container .header-background .header-block a.scroll-button:hover {
+    color: white;
+    background-color: black;
+}
+
+@media (max-width: 480px) {
+    .container .header-wrapper {
+        max-width: none;
+        width: 90%;
+    }
+    .container .header-wrapper .header-block {
+        padding: 15% 0px 15% 0px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.container .image-background {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 87px;
+    grid-template-rows: auto 87px;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    margin-bottom: 2em;
+}
+
+.container .image-background .image-container {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.container .image-background .image-container img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 35% 0;
+    object-position: 35% 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container .image-background .back-right {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #e7eef3;
+    opacity: 0.6;
+}
+
+@media (max-width: 1280px) {
+    .container .image-background .image-container img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: 35% 0;
+        object-position: 35% 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .image-background {
+        -ms-grid-rows: auto 65px;
+        grid-template-rows: auto 65px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container .image-background {
+        margin-bottom: 0.3em;
+    }
+    .container .image-background .image-container img {
+        display: none;
+    }
+    .container .image-background .back-right {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .container .image-background {
+        -ms-grid-rows: auto 220px;
+        grid-template-rows: auto 220px;
+    }
+}
+
+.container .logo-footer {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 10px 0;
+    height: 67px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .logo-footer .image-logo {
+    position: relative;
+    z-index: 2;
+    height: calc(67px * 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.container .logo-footer .image-logo img {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.container .logo-footer .image-logo.mincif {
+    height: calc(67px * 0.8);
+}
+
+.container .logo-footer .image-logo.kharkiv {
+    height: calc(67px * 0.65);
+}
+
+.container .logo-footer .image-logo.usaid {
+    height: calc(67px * 0.5);
+}
+
+.container .logo-footer .image-logo.ukaid {
+    height: calc(67px * 0.6);
+}
+
+.container .logo-footer .image-logo.eur {
+    height: calc(67px * 0.5);
+}
+
+.container .logo-footer .image-logo.texty {
+    height: calc(67px * 0.6);
+}
+
+@media (max-width: 1280px) {
+    .container .logo-footer {
+        height: 6vw;
+    }
+    .container .logo-footer .image-logo img {
+        height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    .container .logo-footer .image-logo.mincif {
+        height: calc(6vw * 0.8);
+    }
+    .container .logo-footer .image-logo.kharkiv,
+    .container .logo-footer .image-logo.ukaid,
+    .container .logo-footer .image-logo.texty {
+        height: calc(6vw * 0.6);
+    }
+    .container .logo-footer .image-logo.eur,
+    .container .logo-footer .image-logo.usaid {
+        height: calc(6vw * 0.5);
+    }
+}
+
+@media (max-width: 767px) {
+    .container .logo-footer {
+        width: 90%;
+        height: 200px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .container .logo-footer .image-logo img {
+        height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    .container .logo-footer .image-logo.mincif {
+        height: calc(60px * 0.8);
+    }
+    .container .logo-footer .image-logo.kharkiv,
+    .container .logo-footer .image-logo.ukaid,
+    .container .logo-footer .image-logo.texty {
+        height: calc(60px * 0.6);
+    }
+    .container .logo-footer .image-logo.eur,
+    .container .logo-footer .image-logo.usaid {
+        height: calc(60px * 0.5);
+    }
+    .container .logo-footer .image-logo.mincif,
+    .container .logo-footer .image-logo.kharkiv {
+        -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    }
+    .container .logo-footer .image-logo.usaid {
+        -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
+    }
+    .container .logo-footer .image-logo.eur {
+        -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
+    }
+    .container .logo-footer .image-logo.ukaid {
+        -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .logo-footer {
+        height: 260px;
+    }
+}
+
+.container .nav-background {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding-bottom: 0.7em;
+    width: 100%;
+    background-color: white;
+}
+
+.container .nav-background .navigation-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto 0 auto;
+    padding: 24px 0;
+    border-bottom: 2px solid black;
+    font-size: 13px;
+    font-family: e-UkraineRegular;
+    position: relative;
+}
+
+.container .nav-background .navigation-menu .nav-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .nav-background .navigation-menu .nav-button {
+    color: black;
+    margin-right: 3em;
+    padding: 8px 0 6px 0;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.container .nav-background .navigation-menu .nav-button.selected {
+    border-bottom: 2px solid black;
+}
+
+.container .nav-background .navigation-menu .nav-button:hover {
+    border-bottom: 2px solid black;
+}
+
+.container .nav-background .navigation-menu a {
+    font-size: 16px;
+}
+
+.container .nav-background .navigation-menu a.nav-button:hover {
+    border-bottom: 2px solid transparent;
+}
+
+.container .nav-background .navigation-menu .share-buttons {
+    position: absolute;
+    width: 84px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 84px;
+    flex: 0 0 84px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.container .nav-background .navigation-menu .share-buttons a {
+    max-width: 36px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 36px;
+    flex: 0 0 36px;
+    height: 36px;
+}
+
+@media (max-width: 992px) {
+    .container .nav-background .navigation-menu .nav-button {
+        margin-right: 1.75em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .nav-background .navigation-menu {
+        width: 90%;
+        font-size: 0.9em;
+    }
+    .container .nav-background .navigation-menu .nav-button {
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
+        margin-right: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .nav-background .navigation-menu {
+        display: block;
+        font-size: 0.77em;
+    }
+    .container .nav-background .navigation-menu .nav-buttons {
+        margin-bottom: 8px;
+    }
+    .container .nav-background .navigation-menu .nav-button {
+        width: -webkit-min-content;
+        width: -moz-min-content;
+        width: min-content;
+        margin-right: 2em;
+    }
+    .container .nav-background .navigation-menu .share-buttons {
+        position: static;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+    .container .nav-background .navigation-menu .share-buttons a {
+        margin-right: 8px;
+    }
+}
+
+.container .to-main {
+    margin: 0 auto 2em auto;
+}
+
+.container .to-main a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
+}
+
+.container .to-main a:hover {
+    color: #616365;
+    border-bottom: 1px solid #616365;
+}
+
+.container .about-project {
+    margin: 120px auto 2.5em auto;
+    padding-bottom: 2.5em;
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "project-header project-text" ". next-button";
+    -ms-grid-columns: 0.4fr 0.6fr;
+    grid-template-columns: 0.4fr 0.6fr;
+    -webkit-column-gap: 30px;
+    column-gap: 30px;
+}
+
+.container .about-project .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: project-header;
+}
+
+.container .about-project .header-container .header-text {
+    font-family: e-UkraineRegular;
+    font-size: 2.9em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.container .about-project .header-text-small {
+    font-family: e-UkraineRegular;
+    font-size: 2em;
+    margin: 1em 0 0.7em 0;
+}
+
+.container .about-project .normal-text,
+.container .about-project li {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.container .about-project .normal-text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: project-text;
+}
+
+.container .about-project .read-next-button {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: next-button;
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 16px 32px;
+    border-radius: 40px;
+    height: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    text-decoration: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.container .about-project .read-next-button:hover {
+    background-origin: border-box;
+    border: 2px solid transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4f4fff), to(#bb829e));
+    background-image: linear-gradient(90deg, #4f4fff, #bb829e);
+}
+
+.container .about-project.full-page {
+    display: block;
+}
+
+.container .about-project.full-page .header-container {
+    display: block;
+}
+
+.container .about-project.full-page .header-container .header-text {
+    margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    .container .about-project {
+        -ms-grid-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .about-project {
+        display: block;
+        max-width: none;
+        width: 90%;
+    }
+    .container .about-project .header-container {
+        display: block;
+    }
+    .container .about-project .header-container .header-text {
+        margin-bottom: 1em;
+    }
+}
+
+.container .main-section-wrapper {
+    background: #E7EEF3;
+    padding: 80px 0 60px 0;
+}
+
+.container .main-section .big-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0px auto 120px auto;
+}
+
+.container .main-section .big-stats .stats-cell {
+    background-color: white;
+    padding: 1em 2% 1em 2%;
+    margin-right: 2%;
+}
+
+.container .main-section .big-stats .stats-cell .stats-number {
+    font-size: 6em;
+}
+
+.container .main-section .big-stats .stats-cell .stats-label {
+    font-size: 1em;
+}
+
+.container .main-section .big-stats .stats-cell:nth-child(1) {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+}
+
+.container .main-section .big-stats .stats-cell:nth-child(2) {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+}
+
+.container .main-section .big-stats .stats-cell:last-child {
+    margin-right: 0;
+}
+
+.container .main-section .big-stats .stats-cell:last-child span {
+    margin-left: 2%;
+    font-size: 6vw;
+    font-size: 0.76em;
+}
+
+@media (max-width: 768px) {
+    .container .main-section .big-stats .stats-cell {
+        margin-bottom: 0.7em;
+    }
+    .container .main-section .big-stats .stats-cell:last-child span {
+        margin-left: 3%;
+    }
+    .container .main-section .big-stats .stats-cell .stats-number {
+        font-size: 9vmin;
+    }
+    .container .main-section .big-stats .stats-cell .stats-label {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .main-section .big-stats {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+    .container .main-section .big-stats .stats-cell {
+        margin-bottom: 0.7em;
+        margin-right: 0;
+    }
+    .container .main-section .big-stats .stats-cell:last-child span {
+        font-size: 12vmin;
+        margin-left: 3%;
+    }
+    .container .main-section .big-stats .stats-cell .stats-number {
+        font-size: 12vmin;
+    }
+    .container .main-section .big-stats .stats-cell .stats-label {
+        font-size: 1em;
+    }
+}
+
+.container .main-section .hospital-stats-wrapper {
+    background-color: #E7EEF3;
+}
+
+.container .main-section .hospital-stats-wrapper .hospital-stats-container {
+    margin: 3em auto 2.5em auto;
+    padding-top: 2em;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice {
+    width: 200px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-label {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-name {
+    position: relative;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-name text {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-name span {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(87.99deg, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-name text:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 4.5px 0 4.5px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    right: 0;
+    top: 11px;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-options {
+    display: none;
+    position: absolute;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    max-height: 250px;
+    background-color: white;
+    padding: 4px 0px 6px 0px;
+    margin-top: 6px;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-options.open {
+    display: block;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-options .entity-value {
+    display: block;
+    padding: 4px 11.8px 4px 11.8px;
+    margin: 12px 8px;
+    pointer-events: auto;
+    color: black;
+    font-weight: normal;
+}
+
+.container .main-section .hospital-stats-wrapper .entity-choice .entity-options .entity-value:hover {
+    background-color: #E7EEF3;
+}
+
+.container .main-section .hospital-stats-wrapper .icon-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.container .main-section .hospital-stats-wrapper .icon-description .icon-title {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin-right: 24px;
+}
+
+.container .main-section .hospital-stats-wrapper .icon-description .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .main-section .hospital-stats-wrapper .icon-description .icon-container .icon-item {
+    margin-right: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .main-section .hospital-stats-wrapper .icon-description .icon-container .icon-item img {
+    -o-object-fit: container;
+    object-fit: container;
+    height: 24px;
+    width: 24px;
+    margin-right: 4px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 0.33fr);
+    grid-template-rows: repeat(3, 300px);
+    column-gap: 5px;
+    row-gap: 15px;
+}
+
+.container .main-section .hospital-stats-wrapper .district-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart {
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart .table-header {
+    margin-bottom: 15px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart .tbody {
+    height: 100%;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart .tbody text {
+    font-size: 10px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart .column-header,
+.container .main-section .hospital-stats-wrapper .bar-chart .column-content {
+    font-size: 12px;
+    display: inline-block;
+    width: 124px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart .column-content {
+    height: 100%;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart div#legal_entity_name {
+    width: 62px;
+    margin-right: 5px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart div#legal_entity_name text {
+    padding-left: 0;
+    font-size: 11px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart div#last_month,
+.container .main-section .hospital-stats-wrapper .bar-chart div#n_visits {
+    margin-right: 10px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart #n_visits rect {
+    fill: #B961A2;
+    rx: 9px;
+}
+
+.container .main-section .hospital-stats-wrapper .bar-chart #sum rect {
+    fill: #6E7DBC;
+    rx: 9px;
+}
+
+.container .main-section .hospital-stats-wrapper .district-warning {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    font-size: 12px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .main-section .hospital-stats-wrapper .district-warning .pointer-icon {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.container .main-section .hospital-stats-wrapper .district-warning .pointer-icon img {
+    height: 36px;
+    width: 36px;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale {
+    height: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale .slider-title {
+    display: inline-block;
+    height: 48px;
+    -ms-flex-preferred-size: 15%;
+    flex-basis: 15%;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale .slider-body {
+    height: 48px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale .slider-body svg {
+    width: 100%;
+    height: 100%;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale .slider-body svg .tick line {
+    stroke: black;
+}
+
+.container .main-section .hospital-stats-wrapper .time-scale .slider-body svg text {
+    font-size: 11px;
+}
+
+@media (max-width: 768px) {
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .icon-description {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .icon-description .icon-title {
+        margin-bottom: 24px;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-header,
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-content {
+        font-size: 0.5em;
+        width: 25%;
+        margin-left: 3%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-header text,
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-content text {
+        padding-left: 0;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart #legal_entity_name {
+        margin-left: 0;
+        width: 20%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .time-scale {
+        display: block;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .time-scale .slider-title {
+        height: auto;
+        margin-bottom: 24px;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .time-scale .slider-body {
+        width: 100%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .time-scale .slider-body svg {
+        width: 80%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-grid {
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: repeat(5, 300px);
+        column-gap: 5px;
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .icon-description .icon-container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .icon-description .icon-container .icon-item {
+        margin-bottom: 16px;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-grid {
+        -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container {
+        width: 90%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-header,
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-content {
+        font-size: 0.5em;
+        width: 34%;
+        margin-left: 2%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-header text,
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart .column-content text {
+        padding-left: 0;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .bar-chart #legal_entity_name {
+        margin-left: 0;
+        width: 20%;
+    }
+    .container .main-section .hospital-stats-wrapper .hospital-stats-container .time-scale .slider-body svg {
+        width: 100%;
+    }
+}
+
+.container .main-section .doctor-stats-container {
+    margin: 4em auto 0px auto;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-grid {
+    margin-bottom: 36px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 0.68fr 0.32fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 8px;
+}
+
+.container .main-section .doctor-stats-container #search-bar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: 1/1;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1em;
+    gap: 1.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.container .main-section .doctor-stats-container #search-bar .search-cell {
+    width: 75%;
+    margin-right: 5%;
+}
+
+@media (max-width: 480px) {
+    .container .main-section .doctor-stats-container #search-bar .search-cell .input-box input {
+        font-size: 12px;
+    }
+}
+
+.container .main-section .doctor-stats-container #search-bar .input-box,
+.container .main-section .doctor-stats-container #search-bar .button-box {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .main-section .doctor-stats-container #search-bar .input-box {
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding: 0.5em 0.2px 0.5em 0.2em;
+}
+
+.container .main-section .doctor-stats-container #search-bar .input-box input {
+    color: black;
+    font-size: 16px;
+    font-family: e-UkraineLight;
+    width: 100%;
+}
+
+.container .main-section .doctor-stats-container #search-bar .button-box {
+    border: 2px solid black;
+    background-color: black;
+    padding: 12px 28px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.container .main-section .doctor-stats-container #search-bar .button-box button {
+    font-size: 1em;
+    font-family: e-UkraineLight;
+    cursor: pointer;
+}
+
+.container .main-section .doctor-stats-container #search-bar .button-box:hover {
+    background-origin: border-box;
+    border: 2px solid transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4f4fff), to(#bb829e));
+    background-image: linear-gradient(90deg, #4f4fff, #bb829e);
+}
+
+.container .main-section .doctor-stats-container #search-bar input,
+.container .main-section .doctor-stats-container #search-bar button {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: 3/1;
+    width: 650px;
+    gap: 1.5em;
+    height: 380px;
+    margin-top: 3em;
+    margin-bottom: 40px;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .text-info {
+    font-size: 0.7em;
+    position: absolute;
+    top: 2%;
+    right: 0;
+    line-height: 1.5em;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area {
+    width: 100%;
+    height: 100%;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area .axis path,
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area .axis line {
+    fill: none;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area .axis--x line {
+    stroke-width: 1px;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area .axis text {
+    font: 10px sans-serif;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area .cells path {
+    fill: none;
+    pointer-events: visiblePainted;
+}
+
+.container .main-section .doctor-stats-container .beeswarm-chart .main-chart .svg-area svg text {
+    font-size: 11px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: 2/1;
+    padding-top: 15px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-title {
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container {
+    margin-bottom: 1em;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container .color-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 26px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container .color-buttons .bee-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container .color-buttons .bee-button#city_district {
+    margin-right: 0.5em;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container .color-buttons .bee-button:hover {
+    background-origin: border-box;
+    border: 2px solid transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4f4fff), to(#bb829e));
+    background-image: linear-gradient(90deg, #4f4fff, #bb829e);
+}
+
+.container .main-section .doctor-stats-container .chart-legend .button-container .color-buttons .selected-button {
+    background-color: black;
+    color: white;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-title {
+    display: none;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-title.selected-title {
+    display: block;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-title text {
+    font-size: 11px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-markers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    height: 46px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-markers .circleLegend {
+    font-size: 12px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 15px;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .legend-markers .circleLegend text {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .doctor-spec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .doctor-spec .d-spec {
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .doctor-spec .d-spec.selected {
+    opacity: 1;
+    border-bottom: black 2px solid;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .doctor-spec .d-spec:hover {
+    opacity: 1;
+}
+
+.container .main-section .doctor-stats-container .chart-legend .doctor-spec .ther {
+    margin-right: 15px;
+}
+
+.container .main-section .doctor-stats-container .doc-hospital p,
+.container .main-section .doctor-stats-container .doc-data p,
+.container .main-section .doctor-stats-container .load-data p {
+    font-size: 0.8em;
+}
+
+.container .main-section .doctor-stats-container .doc-hospital p.profile-title,
+.container .main-section .doctor-stats-container .doc-data p.profile-title,
+.container .main-section .doctor-stats-container .load-data p.profile-title {
+    font-size: 0.668em;
+    padding: 0px 0px 0.2em 0px;
+    display: block;
+}
+
+.container .main-section .doctor-stats-container .doc-data {
+    padding-top: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 0.37fr 0.67fr;
+    grid-template-columns: 0.37fr 0.67fr;
+    grid-gap: 1em;
+}
+
+.container .main-section .doctor-stats-container .doc-data>div {
+    padding-top: 1em;
+    border-top: 1px solid black;
+}
+
+.container .main-section .doctor-stats-container .doc-name {
+    height: 50px;
+}
+
+.container .main-section .doctor-stats-container .doc-hospital {
+    height: 65px;
+    margin-bottom: 1em;
+}
+
+.container .main-section .doctor-stats-container .heatmap {
+    height: 167px;
+    padding-top: 1em;
+    border-top: 1px solid black;
+    grid-column: span 2;
+}
+
+.container .main-section .doctor-stats-container .heatmap #calendar-heatmap {
+    margin-top: 1em;
+}
+
+.container .main-section .doctor-stats-container .heatmap #calendar-heatmap svg:first-child {
+    margin-right: 35px;
+}
+
+.container .main-section .doctor-stats-container .heatmap #calendar-heatmap text {
+    font-size: 9px;
+}
+
+.container .main-section .doctor-stats-container .gender-age-info {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid black;
+    grid-column: span 2;
+}
+
+.container .main-section .doctor-stats-container .gender-age {
+    width: 200px;
+    height: 150px;
+}
+
+.container .main-section .doctor-stats-container .gender-age text {
+    font-family: e-UkraineLight;
+    font-size: 11px;
+}
+
+.container .main-section .doctor-stats-container .gender-age .male.average rect {
+    stroke-width: 1px;
+    fill: none;
+    rx: 5px;
+    stroke: black;
+}
+
+.container .main-section .doctor-stats-container .gender-age .female.average rect {
+    stroke-width: 1px;
+    fill: none;
+    rx: 5px;
+    stroke: black;
+}
+
+.container .main-section .doctor-stats-container .gender-age .male.selected rect {
+    stroke-width: 1px;
+    fill: #6E7DBC;
+    rx: 5px;
+    stroke: #6E7DBC;
+}
+
+.container .main-section .doctor-stats-container .gender-age .female.selected rect {
+    stroke-width: 1px;
+    fill: #B961A2;
+    rx: 5px;
+    stroke: #B961A2;
+}
+
+.container .main-section .doctor-stats-container .load-perc {
+    height: 77px;
+}
+
+@media (max-width: 1280px) {
+    .container .main-section .doctor-stats-container .beeswarm-chart .button-container {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .main-section .doctor-stats-container .beeswarm-grid {
+        display: block;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .button-title,
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .button-container {
+        display: none;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .legend-markers {
+        font-size: 12px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .legend-markers .circleLegend:last-child {
+        margin: 0;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .beeswarm-chart {
+        width: auto;
+        margin-bottom: 56px;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .beeswarm-chart .text-info {
+        margin-left: 25px;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .how-to-section {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .main-section .doctor-stats-container .beeswarm-grid {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .doc-data {
+        -ms-grid-columns: 0.4fr 0.6fr;
+        grid-template-columns: 0.4fr 0.6fr;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .load-data {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 0.4fr 0.6fr;
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-gap: 1em;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .load-data .heatmap,
+    .container .main-section .doctor-stats-container .beeswarm-grid .load-data .gender-age-info {
+        grid-column: span 1;
+        margin: 0;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .legend-markers {
+        height: 72px;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .how-to-section {
+        margin-bottom: 56px;
+        -ms-grid-row: 4;
+        grid-area: 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .main-section .doctor-stats-container {
+        width: 90%;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .beeswarm-chart {
+        width: auto;
+        height: 450px;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .load-data {
+        display: block;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .heatmap,
+    .container .main-section .doctor-stats-container .beeswarm-grid .gender-age-info {
+        grid-column: span 2;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .gender-age-info .gender-age {
+        margin: 1em auto 0 auto;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .heatmap #calendar-heatmap {
+        width: 80%;
+        margin: 1em auto 0 auto;
+    }
+    .container .main-section .doctor-stats-container .beeswarm-grid .chart-legend .legend-markers {
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .main-section .doctor-stats-container #search-bar .button-box {
+        padding: 0.3em 1em 0.3em 1em;
+    }
+    .container .main-section .doctor-profile {
+        font-size: 0.9em;
+    }
+    .container .main-section #calendar-heatmap {
+        text-align: center;
+    }
+    .container .main-section .gender-age-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .container .main-section .gender-age-info .gender-age {
+        display: block;
+        margin-top: 25px;
+    }
+}
+
+.container .disease-section {
+    margin: 60px 0 60px 0;
+}
+
+.container .disease-section .top-dis-stats {
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "section-text switch-bars" "section-text bar-title" "gender-age-calc bars";
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-grid-columns: 63% 37%;
+    grid-template-columns: 63% 37%;
+    -webkit-column-gap: 3em;
+    column-gap: 3em;
+    row-gap: 1.2em;
+}
+
+.container .disease-section .top-dis-stats .section-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: section-text;
+}
+
+.container .disease-section .top-dis-stats .section-text p {
+    max-width: 92%;
+}
+
+.container .disease-section .top-dis-stats .section-text p br {
+    display: none;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: gender-age-calc;
+    margin-bottom: 48px;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age {
+    padding: 40px;
+    margin: 0;
+    background: white;
+    border: double 2px transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container {
+    border-radius: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "title title" "age-selectors age-selectors" "gender-selectors gender-selectors" "next-button next-button";
+    -ms-grid-columns: auto 100px;
+    grid-template-columns: auto 100px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .calc-descr {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .calc-descr .block-header {
+    margin-bottom: 1.2em;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .calc-descr .block-text {
+    max-width: 100%;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: age-selectors;
+    margin-bottom: 26px;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: gender-selectors;
+    margin-bottom: 38px;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .title-buttons,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .title-buttons {
+    margin-bottom: 0.5em;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .gender-buttons,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .gender-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .gender-buttons .gender-selector,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .gender-buttons .gender-selector {
+    height: 24px;
+    padding: 0px 30px;
+    margin: 0px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .age-buttons,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .age-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 24px;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .age-buttons .age-selector,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .age-buttons .age-selector {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0px 30px;
+    margin: 3px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .checkmark,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .checkmark:after,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .checkmark:after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .gender-selector.calc-selected-button .checkmark:after,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .age-selectors .age-selector.calc-selected-button .checkmark:after,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .gender-selector.calc-selected-button .checkmark:after,
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .gender-selectors .age-selector.calc-selected-button .checkmark:after {
+    display: block;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .next-button-container {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: next-button;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .next-button-container .next-button {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .calc-container .next-button-container .next-button:hover {
+    background-origin: border-box;
+    border: 2px solid transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4f4fff), to(#bb829e));
+    background-image: linear-gradient(90deg, #4f4fff, #bb829e);
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .gender-age-body {
+    display: none;
+    padding-top: 2em;
+    background-color: #FFFFFF;
+    margin-top: 2.5em;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .gender-age-body .block-text {
+    grid-area: descr-text;
+    max-width: 100%;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .gender-age-body .block-text ol {
+    padding-left: 32px;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .gender-age-body .block-text ol li {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.container .disease-section .top-dis-stats .choose-gender-age-wrapper .gender-age-body .block-text .block-header {
+    line-height: normal;
+}
+
+.container .disease-section .top-dis-stats .switch-bars {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: switch-bars;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 64px;
+}
+
+.container .disease-section .top-dis-stats .switch-bars .bar-switcher {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin-right: 8px;
+    background: #E5E5E5;
+    border: 2px solid transparent;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container .disease-section .top-dis-stats .switch-bars .bar-switcher:last-child {
+    margin-right: 0;
+}
+
+.container .disease-section .top-dis-stats .switch-bars .bar-switcher.selected {
+    background: white;
+    border: 2px solid #000000;
+}
+
+.container .disease-section .top-dis-stats .bar-title {
+    font-size: 1.7em;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: bar-title;
+}
+
+.container .disease-section .top-dis-stats #gender-age-bars {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: bars;
+}
+
+.container .disease-section .top-dis-stats #gender-age-bars text {
+    font-size: 12px;
+}
+
+.container .disease-section .top-dis-stats #gender-age-bars rect {
+    rx: 4px;
+}
+
+.container .disease-section .top-dis-stats #gender-age-bars .note-text {
+    grid-area: note-text;
+    font-size: 14px;
+}
+
+@media (max-width: 992px) {
+    .container .disease-section .top-dis-stats {
+        grid-template-areas: "section-text" "switch-bars" "bar-title" "bars" "gender-age-calc";
+        -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        row-gap: 48px;
+    }
+    .container .disease-section .top-dis-stats .section-text {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: section-text;
+    }
+    .container .disease-section .top-dis-stats .bar-title {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        grid-area: bar-title;
+    }
+    .container .disease-section .top-dis-stats .switch-bars {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: switch-bars;
+    }
+    .container .disease-section .top-dis-stats .switch-bars .bar-switcher {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-right: 16px;
+    }
+    .container .disease-section .top-dis-stats .bar-title {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        grid-area: bar-title;
+    }
+    .container .disease-section .top-dis-stats #gender-age-bars {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        grid-area: bars;
+        width: 70%;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        grid-area: gender-age-calc;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .disease-section .top-dis-stats #gender-age-bars {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .disease-section .top-dis-stats .switch-bars .bar-switcher {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age {
+        padding: 40px 0 40px 0;
+        border: none;
+        border-top: solid 2px transparent;
+        border-bottom: solid 2px transparent;
+        margin: 0 auto 0 auto;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container {
+        display: block;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .age-selectors {
+        height: 130px;
+        margin-bottom: 1.5em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .age-selectors .title-buttons {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .age-selectors .age-buttons {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .age-selectors .age-buttons .age-selector {
+        -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+        padding: 0 0 0 35px;
+        margin: 0 0px 25px 0px;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .gender-selectors {
+        margin-bottom: 1.5em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .gender-selectors .title-buttons {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .gender-selectors .gender-buttons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .calc-container .next-button-container {
+        text-align: center;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body {
+        display: -ms-grid;
+        display: grid;
+        grid-template-areas: "bar-title" "bars" "descr-text";
+        -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        display: none;
+        padding: 2em 0.5em 0 0.5em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body .bar-title {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: bar-title;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body .block-text {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        grid-area: descr-text;
+        margin-bottom: 0;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body .block-text ul {
+        padding-left: 1em;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body #gender-age-bars {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: bars;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body #gender-age-bars y text {
+        font-size: 12px;
+    }
+    .container .disease-section .top-dis-stats .choose-gender-age-wrapper .choose-gender-age .gender-age-body #gender-age-bars rect {
+        rx: 4px;
+    }
+}
+
+.container .disease-section .header-line-chart {
+    margin: 0px auto 0px auto;
+}
+
+.container .disease-section .line-chart-container {
+    margin: 0px auto 36px auto;
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "button-wrapper-hosp button-wrapper-drop . ." "middle-space-left middle-space-left middle-space-left middle-space-right" "svg svg svg legend" "svg svg svg legend";
+    -ms-grid-columns: 360px 270px 90px 33%;
+    grid-template-columns: 360px 270px 90px 33%;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-gender {
+    grid-area: button-wrapper-gender;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-age {
+    grid-area: button-wrapper-age;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-hosp {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: button-wrapper-hosp;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-drop {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: button-wrapper-drop;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-gender,
+.container .disease-section .line-chart-container .button-wrapper-age,
+.container .disease-section .line-chart-container .button-wrapper-hosp,
+.container .disease-section .line-chart-container .buttonw-wrapper-drop {
+    font-size: 1em;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-gender .filter-options,
+.container .disease-section .line-chart-container .button-wrapper-age .filter-options,
+.container .disease-section .line-chart-container .button-wrapper-hosp .filter-options,
+.container .disease-section .line-chart-container .buttonw-wrapper-drop .filter-options {
+    width: calc(100% - 44px);
+    margin: 0 22px;
+    padding: 1em 0 0 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container .disease-section .line-chart-container .filter-options {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: absolute;
+    padding-top: 0.6em;
+    background-color: white;
+    z-index: 1;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.container .disease-section .line-chart-container .filter-options.active-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value {
+    pointer-events: auto;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value label {
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px 7px 0px 5px;
+    cursor: pointer;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value label:before {
+    content: "";
+    position: relative;
+    background: 0 0;
+    border: 2px solid #000;
+    top: 2px;
+    height: 12px;
+    width: 12px;
+    -webkit-transition: background .4s;
+    transition: background .4s;
+    display: block;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value label:after {
+    content: '';
+    background: url(../images/check-black2.svg) center no-repeat;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value.active-value label:after {
+    opacity: 1;
+}
+
+.container .disease-section .line-chart-container .filter-options .f-value.active-value label:before {
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .button-wrapper-hosp .filter-options {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.container .disease-section .line-chart-container .gender-filters,
+.container .disease-section .line-chart-container .age-filters,
+.container .disease-section .line-chart-container .hosp-choice {
+    position: relative;
+    border: 2px solid black;
+    padding: 12px 56px;
+    border-radius: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.container .disease-section .line-chart-container .gender-filters span:after,
+.container .disease-section .line-chart-container .age-filters span:after,
+.container .disease-section .line-chart-container .hosp-choice span:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 4.5px 0 4.5px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    margin-right: 15px;
+}
+
+.container .disease-section .line-chart-container .gender-filters {
+    position: relative;
+    z-index: 2;
+}
+
+.container .disease-section .line-chart-container .age-filters {
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .hosp-choice {
+    text-align: center;
+}
+
+.container .disease-section .line-chart-container .active-filter {
+    z-index: 2;
+}
+
+.container .disease-section .line-chart-container .middle-space-left {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: middle-space-left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .chart-title {
+    font-size: 0.7em;
+    margin-bottom: 3em;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .switch-branch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 24px;
+    margin: 25px 0px;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .switch-branch .b-switcher {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0px 30px;
+    margin: 3px 15px 3px 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .switch-branch .b-switcher .checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .switch-branch .b-switcher .checkmark:after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.container .disease-section .line-chart-container .middle-space-left .switch-branch .b-switcher.selected .checkmark:after {
+    display: block;
+}
+
+.container .disease-section .line-chart-container .line-chart-svg {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: svg;
+    height: 330px;
+}
+
+.container .disease-section .line-chart-container .line-chart-svg svg text {
+    font-size: 10px;
+}
+
+.container .disease-section .line-chart-container .line-chart-svg svg path.domain {
+    display: none;
+}
+
+.container .disease-section .line-chart-container .line-chart-svg svg .tick line {
+    color: black;
+    stroke-width: 1.5px;
+}
+
+.container .disease-section .line-chart-container .drop-filter {
+    display: inline-block;
+    font-size: 1em;
+    border: 2px solid black;
+    padding: 12px 56px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.container .disease-section .line-chart-container .drop-filter:hover {
+    background-origin: border-box;
+    border: 2px solid transparent;
+    background-image: -webkit-gradient(linear, left top, right top, from(#4f4fff), to(#bb829e));
+    background-image: linear-gradient(90deg, #4f4fff, #bb829e);
+}
+
+.container .disease-section .line-chart-container .line-chart-legend {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: legend;
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .line-chart-legend .legend-list {
+    position: absolute;
+    overflow-y: auto;
+    height: 82%;
+}
+
+.container .disease-section .line-chart-container .line-chart-legend .legend-list .boxLegend {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .disease-section .line-chart-container .line-chart-legend .legend-list .boxLegend svg {
+    pointer-events: none;
+}
+
+.container .disease-section .line-chart-container .line-chart-legend .legend-list .boxLegend text {
+    pointer-events: none;
+    font-size: 0.7em;
+    width: 90%;
+}
+
+.container .disease-section .line-chart-container .middle-space-right {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: middle-space-right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter {
+    font-size: 0.7em;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter input {
+    font-family: e-UkraineLight;
+    font-size: 12px;
+    border: none;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box {
+    margin: 1em 0px 2em 0px;
+    border-bottom: 2px solid black;
+    padding: 10px 7px 10px 7px;
+    position: relative;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box input {
+    color: black;
+    font-size: 1.2em;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box ::-webkit-input-placeholder {
+    color: black;
+    font-size: 1.2em;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box :-ms-input-placeholder {
+    color: black;
+    font-size: 1.2em;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box ::-ms-input-placeholder {
+    color: black;
+    font-size: 1.2em;
+}
+
+.container .disease-section .line-chart-container .middle-space-right .diag-filter .diag-input-box ::placeholder {
+    color: black;
+    font-size: 1.2em;
+}
+
+.container .disease-section .line-chart-container .hidden-legend .hidden-legend-button {
+    display: none;
+}
+
+.container .disease-section .line-chart-container .hidden-legend .hidden-legend-content {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .container .disease-section .line-chart-container {
+        -webkit-column-gap: 0.75em;
+        column-gap: 0.75em;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-gender,
+    .container .disease-section .line-chart-container .button-wrapper-age,
+    .container .disease-section .line-chart-container .button-wrapper-hosp,
+    .container .disease-section .line-chart-container .button-wrapper-drop {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .disease-section .line-chart-container {
+        -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    }
+    .container .disease-section .line-chart-container .line-chart-svg {
+        margin-bottom: 24px;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-hosp,
+    .container .disease-section .line-chart-container .button-wrapper-drop {
+        margin-bottom: 48px;
+    }
+    .container .disease-section .line-chart-container .middle-space-right {
+        margin: 0 0 24px 64px;
+        padding: 0;
+        -ms-grid-row: 5;
+        grid-area: 5 / span 2;
+        width: 75%;
+    }
+    .container .disease-section .line-chart-container .line-chart-legend {
+        margin-left: 60px;
+        -ms-grid-row: 6;
+        grid-row: 6;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1 / span 2;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .disease-section .header-line-chart {
+        width: 90%;
+    }
+    .container .disease-section .line-chart-container {
+        position: relative;
+        width: 90%;
+        -ms-grid-columns: 2.3fr 2fr;
+        grid-template-columns: 2.3fr 2fr;
+        -webkit-column-gap: 0.7em;
+        column-gap: 0.7em;
+        row-gap: 1em;
+        grid-template-areas: "gen-filters age-filters" "hosp-choice drop-filter" "middle-space-left middle-space-left" "svg svg" "svg svg" "hidden-legend hidden-legend";
+    }
+    .container .disease-section .line-chart-container .button-wrapper-gender {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: gen-filters;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-age {
+        margin-right: 0;
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        grid-area: age-filters;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-hosp {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: hosp-choice;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-hosp .filter-options .f-value label {
+        float: left;
+    }
+    .container .disease-section .line-chart-container .button-wrapper-drop {
+        margin: 0;
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        grid-area: drop-filter;
+    }
+    .container .disease-section .line-chart-container .hosp-choice,
+    .container .disease-section .line-chart-container .drop-filter {
+        text-align: center;
+        padding: 12px 40px;
+    }
+    .container .disease-section .line-chart-container .middle-space-right {
+        display: none;
+    }
+    .container .disease-section .line-chart-container .middle-space-left {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-area: middle-space-left;
+    }
+    .container .disease-section .line-chart-container .middle-space-left .chart-title {
+        margin-bottom: 0;
+    }
+    .container .disease-section .line-chart-container .line-chart-svg {
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-area: svg;
+    }
+    .container .disease-section .line-chart-container .line-chart-svg .y-axis-label {
+        display: none;
+    }
+    .container .disease-section .line-chart-container .line-chart-legend {
+        display: none;
+    }
+    .container .disease-section .line-chart-container .hidden-legend {
+        margin: 0 auto;
+        -ms-grid-row: 6;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-area: hidden-legend;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-button {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 0.4em 1.7em 1em 0;
+        margin: 0 0 2em 0;
+        border-bottom: 2px solid transparent;
+        -webkit-transition: border-bottom .2s;
+        transition: border-bottom .2s;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-button span {
+        position: relative;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-button span:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0.55em 0.36em 0 0.36em;
+        border-color: black transparent transparent transparent;
+        position: absolute;
+        margin-left: 1em;
+        top: 0.4em;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-button.selected {
+        border-bottom: 2px solid black;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content {
+        display: block;
+        background-color: white;
+        -ms-grid-row: 6;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-area: hidden-legend;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content.selected {
+        display: block;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content.selected .line-chart-legend {
+        height: 45vh;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content .middle-space-right {
+        display: none;
+        padding: 0;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content .line-chart-legend {
+        display: block;
+        position: relative;
+        height: 0;
+        -webkit-transition: height .5s;
+        transition: height .5s;
+    }
+    .container .disease-section .line-chart-container .hidden-legend .hidden-legend-content .line-chart-legend .legend-list {
+        height: 100%;
+    }
+}
+
+.container .how-to-section-wrapper {
+    margin: 0px auto 0px auto;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .container .disease-section {
+        margin: 0;
+    }
+}
+
+.container .charity-section-wrapper {
+    background: #F1F1F1;
+    padding: 60px 0 0 0;
+}
+
+.container .charity-section .hospital-label-small {
+    font-size: 14px;
+    max-height: 0;
+    padding: 15px 0 0 0;
+    overflow: hidden;
+    -webkit-transition: max-height 2s, padding .1s;
+    transition: max-height 2s, padding .1s;
+}
+
+.container .charity-section #treemap-container {
+    height: 100vh;
+}
+
+.container .charity-section #treemap-container .treemap-wrapper {
+    margin: 0.5em auto 3em auto;
+    height: 87%;
+}
+
+.container .charity-section #treemap-container #chart {
+    padding: 1.5em 0px 2em 0px;
+    height: 100%;
+}
+
+.container .charity-section #treemap-container #chart .gparent {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .charity-section #treemap-container #chart .gparent .all-hospitals {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 12px 28px 12px 28px;
+    z-index: 1;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.container .charity-section #treemap-container #chart .gparent .all-hospitals .back-icon {
+    opacity: 0;
+}
+
+.container .charity-section #treemap-container #chart .gparent .all-hospitals .back-icon.active {
+    background: url(../images/back-icon-small.png) center no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 16px;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    opacity: 1;
+}
+
+.container .charity-section #treemap-container #chart .gparent .hospital-summary {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.container .charity-section #treemap-container text {
+    font-family: e-UkraineLight;
+}
+
+.container .charity-section #treemap-container #chart .ctext {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .charity-section #treemap-container #chart svg {
+    padding-top: 5px;
+}
+
+.container .charity-section #treemap-container .title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.container .charity-section #treemap-container text {
+    pointer-events: none;
+}
+
+.container .charity-section #treemap-container .grandparent text {
+    font-weight: bold;
+}
+
+.container .charity-section #treemap-container rect.grandparent,
+.container .charity-section #treemap-container rect.parent,
+.container .charity-section #treemap-container rect.children,
+.container .charity-section #treemap-container rect.child {
+    fill: none;
+    stroke: #fff;
+}
+
+.container .charity-section #treemap-container rect.parent,
+.container .charity-section #treemap-container .grandparent rect {
+    stroke-width: 2px;
+}
+
+.container .charity-section #treemap-container .grandparent :nth-child(1) {
+    fill: black;
+}
+
+.container .charity-section #treemap-container .grandparent image {
+    stroke: white;
+}
+
+.container .charity-section #treemap-container .grandparent text {
+    fill: white;
+    font-weight: normal;
+}
+
+.container .charity-section #treemap-container .grandparent text.hospital-summary {
+    fill: black;
+    font-weight: bold;
+}
+
+.container .charity-section #treemap-container .grandparent rect {
+    cursor: pointer;
+    height: 45px;
+    rx: 22px;
+    text-align: center;
+}
+
+.container .charity-section #treemap-container rect {
+    shape-rendering: auto;
+    stroke: white;
+    stroke-width: 0px;
+}
+
+.container .charity-section #treemap-container .children:hover rect.child {
+    fill: #bbb;
+}
+
+@media (max-width: 1280px) {
+    .container .charity-section #treemap-container {
+        height: 85vmin;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .charity-section #treemap-container {
+        height: 570px;
+    }
+    .container .charity-section #treemap-container .hospital-label-small.selected {
+        padding: 15px 0 10px 0;
+        max-height: 30vh;
+    }
+    .container .charity-section #treemap-container .treemap-wrapper {
+        width: 90%;
+    }
+    .container .charity-section #treemap-container .treemap-wrapper #chart {
+        padding-top: 0;
+    }
+}
+
+.container .charity-section .charity-table-container {
+    margin: 1em auto 0 auto;
+}
+
+.container .charity-section .charity-table-container .charity-table {
+    font-size: 0.9em;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 70px;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters {
+    min-height: 52px;
+    margin-bottom: 12px;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell {
+    position: relative;
+    display: none;
+    border: 2px solid black;
+    padding: 12px 56px;
+    border-radius: 40px;
+    margin-bottom: 7px;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell.cpv.active,
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell.hospital.active,
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell.supplier.active {
+    width: auto;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell text {
+    margin-right: 10px;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell span {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    height: 9px;
+    width: 9px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell span:after,
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell span:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 2px;
+    height: 9px;
+    background-color: black;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell span:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell span:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.container .charity-section .charity-table-container .charity-table .table-filters .filter-cell.active {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.container .charity-section .charity-table-container .charity-table .title {
+    width: 24.5%;
+}
+
+.container .charity-section .charity-table-container .charity-table .title.table-header {
+    width: calc(24.5% + 4px);
+}
+
+.container .charity-section .charity-table-container .charity-table .cpv {
+    width: 10.4%;
+}
+
+.container .charity-section .charity-table-container .charity-table .cpv.table-header {
+    width: calc(10.4% + 4px);
+}
+
+.container .charity-section .charity-table-container .charity-table .hospital {
+    width: 18.7%;
+}
+
+.container .charity-section .charity-table-container .charity-table .hospital.table-header {
+    width: calc(18.7% + 4px);
+}
+
+.container .charity-section .charity-table-container .charity-table .supplier {
+    width: 18.7%;
+}
+
+.container .charity-section .charity-table-container .charity-table .supplier.table-header {
+    width: calc(18.7% + 4px);
+}
+
+.container .charity-section .charity-table-container .charity-table .date {
+    width: 16%;
+    text-align: center;
+}
+
+.container .charity-section .charity-table-container .charity-table .date.table-header {
+    width: calc(16% + 4px);
+}
+
+.container .charity-section .charity-table-container .charity-table .value {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header {
+    background: #E7EEF3;
+    padding: 0px 1px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header ul {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    max-height: 250px;
+    overflow: auto;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 16px 8px 18px 8px;
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header ul label {
+    display: block;
+    padding: 4px 8px 4px 19px;
+    margin-bottom: 12px;
+    pointer-events: auto;
+    color: black;
+    font-weight: normal;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header ul label:hover {
+    background-color: #E7EEF3;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header span {
+    display: none;
+}
+
+.container .charity-section .charity-table-container .charity-table .thead .table-header.cpv:after,
+.container .charity-section .charity-table-container .charity-table .thead .table-header.supplier:after,
+.container .charity-section .charity-table-container .charity-table .thead .table-header.hospital:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 4.5px 0 4.5px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    right: 4px;
+    top: 27px;
+}
+
+.container .charity-section .charity-table-container .charity-table .tbody {
+    height: 50vh;
+    background-color: #E7EEF3;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.container .charity-section .charity-table-container .charity-table .tbody .row-cell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1px 0px;
+}
+
+.container .charity-section .charity-table-container .charity-table .tbody .row-cell .td-cell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px 1px;
+    padding: 5px 2px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.container .charity-section .charity-table-container .charity-table .tbody .row-cell .td-cell .h-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.container .charity-section .charity-table-container .charity-table .table-warning {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .container .charity-section .charity-table-container {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .charity-section .charity-table-container {
+        margin: 3em 0 3em 0;
+        width: 100%;
+    }
+    .container .charity-section .charity-table-container .charity-table {
+        margin: 0 auto 0 auto;
+        width: 90%;
+        font-size: 0.62em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .charity-section .section-block#s2 {
+        display: none;
+    }
+    .container .charity-section .charity-table-container {
+        display: none;
+        margin: 3em 0 3em 0;
+        width: 100%;
+    }
+    .container .charity-section .charity-table-container .charity-table {
+        margin: 0 auto 0 auto;
+        width: 90%;
+    }
+    .container .charity-section .charity-table-container .charity-table div:after,
+    .container .charity-section .charity-table-container .charity-table text {
+        display: none;
+    }
+    .container .charity-section .charity-table-container .charity-table .tbody {
+        height: 30vh;
+    }
+    .container .charity-section .charity-table-container .charity-table .table-warning {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 1em;
+    }
+}
+
+.container .logo-bottom-container {
+    background-color: white;
+}
+
+.container .logo-bottom-container .logo-footer {
+    margin-bottom: 70px;
+    padding-top: 30px;
+}
+
+.selectButton_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    margin: 0 5px 0 0;
+    max-width: 350px;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #000000;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+
+@media (max-width: 1100px) {
+    .recipient_model,
+    .model {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 812px) {
+    .recipient_model,
+    .model {
+        max-width: calc(100% - 10px);
+        width: calc(100% - 10px);
+        margin: 10px 0;
+    }
+}
+
+
+}
+.selectButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    margin: 0 5px 0 0;
+    max-width: 350px;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #000000;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+}
+@media (max-width: 1100px) {
+    .recipient_model,
+    .model {
+        font-size: 12px;
+    }
+}
+@media (max-width: 812px) {
+    .recipient_model,
+    .model {
+        max-width: calc(100% - 10px);
+        width: calc(100% - 10px);
+        margin: 10px 0;
+    }
+}
+
+}
