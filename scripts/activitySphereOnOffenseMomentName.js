@@ -1,4 +1,3 @@
-(function() {
     // set the dimensions and margins of the graph
     var margin = { top: 20, right: 0, bottom: 50, left: 200 },
         width = d3.select("#activitySphereOnOffenseMomentName").node().getBoundingClientRect().width - margin.left - margin.right,
@@ -15,14 +14,11 @@
     d3.csv("data/activitySphereOnOffenseMomentName.csv").then(function(data) {
 
         data.forEach(function(d) {
-            d.raiting = +d.raiting;
+            d.Column = +d.Column;
         });
-
-        console.log(data)
 
         // List of groups (here I have one group per column)
         var allGroup = d3.map(data, function(d) { return (d.activitySphereOnOffenseMomentName) }).keys()
-        console.log(allGroup)
 
         // add the options to the button
         d3.select("#selectButton")
@@ -47,15 +43,13 @@
             .attr("class", "myXaxis")
             .style("display", "none");
 
-        function update(selectedGroup) {
+        function update(f) {
 
-            // Create new data with the selection?
-            var dataFilter = data.filter(function(d) { return d.short_name == selectedGroup });
+            var filtered = data.filter(function(d){ return d.activitySphereOnOffenseMomentName === f})
 
-            // A function that create / update the plot for a given variable:
             // Update the X axis
-            y.domain(dataFilter.short_name.map(function(d) { return d.short_name; }))
-                .range([0, 25 * dataFilter.length])
+            y.domain(filtered.map(function(d) { return d.codexArticle_name; }))
+                .range([0, 25 * filtered.length])
                 .padding([0.2])
 
             yAxis.call(d3.axisLeft(y))
@@ -64,11 +58,11 @@
                 .style("text-anchor", "end")
 
             d3.select("#activitySphereOnOffenseMomentName").select("svg")
-                .attr("height", 25 * dataFilter.length + 50)
+                .attr("height", 25 * filtered.length + 50)
 
 
             // Update the Y axis
-            x.domain([0, d3.max(dataFilter, function(d) { return d.Column })]);
+            x.domain([0, d3.max(filtered, function(d) { return d.Column })]);
             xAxis.transition().duration(1000).call(d3.axisTop(x));
 
             // ----------------
@@ -113,7 +107,7 @@
 
             // Create the u variable
             var u = svg.selectAll("rect")
-                .data(dataFilter);
+                .data(filtered);
 
             u
                 .enter()
@@ -122,11 +116,12 @@
                 .on("mouseover", showTooltip)
                 .on("mousemove", moveTooltip)
                 .on("mouseleave", hideTooltip)
-                .merge(u) // get the already existing elements as well
+                .merge(u) // get the already existing elements as well               
+                .attr("y", function(d) { return y(d.codexArticle_name)})
                 .transition() // and apply changes to all of them
                 .duration(1000)
                 .attr("x", 0)
-                .attr("y", function(d) { return y(d.short_name); })
+                .attr("y", function(d) { return y(d.codexArticle_name); })
                 .attr("height", 20)
                 .attr("width", function(d) { return x(d.Column); })
                 .attr("fill", "#4562AB")
@@ -142,17 +137,18 @@
                 .on("mouseleave", hideTooltip)
 
             var label = svg.selectAll(".bar-labels")
-                .data(data)
+                .data(filtered)
 
             label
                 .enter()
                 .append("text")
                 .attr("class", "bar-labels")
                 .merge(label)
+                .attr("y", function(d) { return y(d.codexArticle_name) + 10; })
                 .transition() // and apply changes to all of them
                 .duration(1000)
                 .attr("x", function(d) { return x(d.Column); })
-                .attr("y", function(d) { return y(d.short_name) + 10; })
+                .attr("y", function(d) { return y(d.codexArticle_name) + 10; })
                 .text(function(d) { return d.Column; });
 
             label
@@ -169,7 +165,6 @@
             update(selectedOption)
 
         })
+
+        update("Депутат місцевої ради")
     })
-
-
-})();
