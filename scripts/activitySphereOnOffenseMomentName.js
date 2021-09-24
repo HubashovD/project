@@ -47,20 +47,15 @@
             .attr("class", "myXaxis")
             .style("display", "none");
 
-        function update(data) {
-            // Initialize the X axis
+        function update(selectedGroup) {
 
-
-            var group = svg.selectAll(".group")
-                .data(data)
-                .enter()
-                .append("g")
-                .attr("class", "group");
+            // Create new data with the selection?
+            var dataFilter = data.filter(function(d) { return d.short_name == selectedGroup });
 
             // A function that create / update the plot for a given variable:
             // Update the X axis
-            y.domain(data.short_name.map(function(d) { return d.short_name; }))
-                .range([0, 25 * data.length])
+            y.domain(dataFilter.short_name.map(function(d) { return d.short_name; }))
+                .range([0, 25 * dataFilter.length])
                 .padding([0.2])
 
             yAxis.call(d3.axisLeft(y))
@@ -69,11 +64,11 @@
                 .style("text-anchor", "end")
 
             d3.select("#activitySphereOnOffenseMomentName").select("svg")
-                .attr("height", 25 * data.length + 50)
+                .attr("height", 25 * dataFilter.length + 50)
 
 
             // Update the Y axis
-            x.domain([0, d3.max(data, function(d) { return d.Column })]);
+            x.domain([0, d3.max(dataFilter, function(d) { return d.Column })]);
             xAxis.transition().duration(1000).call(d3.axisTop(x));
 
             // ----------------
@@ -118,7 +113,7 @@
 
             // Create the u variable
             var u = svg.selectAll("rect")
-                .data(data);
+                .data(dataFilter);
 
             u
                 .enter()
