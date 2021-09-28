@@ -127,12 +127,14 @@
 
 #line_chart {
     position: relative;
+    margin-left: 2.0625vw;
 }
 
 #codex_articles {
     position: relative;
     display: block !important;
     max-width: 99vw !important;
+    margin-left: 2.0625vw;
 }
 
 #codex_articles .tooltip {
@@ -143,6 +145,7 @@
 
 #activitySphereOnOffenseMomentName {
     position: relative;
+    margin-left: 2.0625vw;
 }
 
 #activitySphereOnOffenseMomentName .tooltip {
@@ -191,6 +194,7 @@
 
 #courts_regions {
     position: relative;
+    margin-left: 2.0625vw;
 }
 
 #courts_regions .tooltip {
